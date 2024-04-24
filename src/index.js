@@ -102,6 +102,7 @@ export default function ({ types }) {
     'SwitchStatement',
     'SwitchCase',
     'SequenceExpression',
+    'AssignmentPattern',
   ];
 
   const ret = {

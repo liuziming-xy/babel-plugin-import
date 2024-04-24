@@ -304,4 +304,9 @@ export default class Plugin {
     const expressionsProps = node.expressions.map((_, index) => index);
     this.buildExpressionHandler(node.expressions, expressionsProps, path, state);
   }
+
+  AssignmentPattern(path, state) {
+    const { node } = path;
+    this.buildExpressionHandler(node, ['right'], path, state);
+  }
 }
